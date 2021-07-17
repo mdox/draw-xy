@@ -20,6 +20,9 @@ For customization the source code has to be changed.
 | FRAME      | 0                                   | Start frame                                              |
 | INDEX      | 0                                   | Start index                                              |
 | REPEAT     | 0                                   | Repeat rendered video X times                            |
+| IMAGE_FILE | image.png                           | Output image file                                        |
+| FRAMES_DIR | frames                              | Output frames dir                                        |
+| VIDEO_FILE | video.mp4                           | Output video file                                        |
 
 ## Usage
 
