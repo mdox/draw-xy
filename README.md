@@ -33,13 +33,13 @@ make IN_WIDTH=680 IN_HEIGHT=420 frames
 make install && ./draw-xy.exe -w 680 -h 420 | ffmpeg ...
 
 # Frames target on my machine (test)
-make IN_CHANNELS=1 IN_WIDTH=320 IN_HEIGHT=280 RATE=60 frames && sxiv frames
+make CHANNELS=1 IN_WIDTH=320 IN_HEIGHT=280 RATE=60 frames && sxiv frames
 
 # Video target
 make REPEAT=2 video
 
 # Video target on my machine (test)
-make REPEAT_VIDEO=5 IN_CHANNELS=3 IN_WIDTH=3840 IN_HEIGHT=2160 RATE=60 video && mpv --loop-file video.mp4 --video-unscaled
+make REPEAT_VIDEO=5 CHANNELS=3 IN_WIDTH=3840 IN_HEIGHT=2160 RATE=60 video && mpv --loop-file video.mp4 --video-unscaled
 ```
 
 # For Source Code Editing
@@ -82,7 +82,7 @@ void plot(unsigned char pixel[], double x, double y)
 
 ```sh
 # XCP Red
-make IN_CHANNELS=3 IN_WIDTH=16000 IN_HEIGHT=9000 OUT_WIDTH=1600 OUT_HEIGHT=900 image && sxiv image.png
+make CHANNELS=3 IN_WIDTH=16000 IN_HEIGHT=9000 OUT_WIDTH=1600 OUT_HEIGHT=900 image && sxiv image.png
 ```
 
 ![XCP Red Image](xcp.png "XCP Red Image")
@@ -91,7 +91,7 @@ make IN_CHANNELS=3 IN_WIDTH=16000 IN_HEIGHT=9000 OUT_WIDTH=1600 OUT_HEIGHT=900 i
 
 ```sh
 # XCP Red 4k60 Video
-make REPEAT_VIDEO=5 IN_CHANNELS=3 IN_WIDTH=3840 IN_HEIGHT=2160 RATE=60 video && mpv --loop-file video.mp4 --video-unscaled
+make REPEAT_VIDEO=5 CHANNELS=3 IN_WIDTH=3840 IN_HEIGHT=2160 RATE=60 video && mpv --loop-file video.mp4 --video-unscaled
 ```
 
 [XCP Red 4k60 Video Link](https://youtu.be/DElDPxMU60Q)
