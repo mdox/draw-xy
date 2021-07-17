@@ -42,7 +42,7 @@ make REPEAT=2 video
 make REPEAT_VIDEO=5 IN_CHANNELS=3 IN_WIDTH=3840 IN_HEIGHT=2160 RATE=60 video && mpv --loop-file video.mp4 --video-unscaled
 ```
 
-# Source Code
+# For Source Code Editing
 
 ## Globals
 
@@ -76,14 +76,25 @@ void plot(unsigned char pixel[], double x, double y)
 }
 ```
 
-# Output Example
+# Output Examples
+
+## XCP Red Image
 
 ```sh
 # XCP Red
 make IN_CHANNELS=3 IN_WIDTH=16000 IN_HEIGHT=9000 OUT_WIDTH=1600 OUT_HEIGHT=900 image && sxiv image.png
 ```
 
-![XCP](xcp.png)
+![XCP Red Image](xcp.png "XCP Red Image")
+
+## XCP Red 4k60 Video
+
+```sh
+# XCP Red 4k60 Video
+make REPEAT_VIDEO=5 IN_CHANNELS=3 IN_WIDTH=3840 IN_HEIGHT=2160 RATE=60 video && mpv --loop-file video.mp4 --video-unscaled
+```
+
+[XCP Red 4k60 Video Link](https://youtu.be/DElDPxMU60Q)
 
 # License
 
