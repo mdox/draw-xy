@@ -1,0 +1,1 @@
+void plot(unsigned char pixel[], double x, double y);
