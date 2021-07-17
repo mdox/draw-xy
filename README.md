@@ -100,4 +100,4 @@ make REPEAT_VIDEO=5 CHANNELS=3 IN_WIDTH=3840 IN_HEIGHT=2160 RATE=60 video && mpv
 
 [GPLv3](https://www.gnu.org/licenses/gpl-3.0.txt)
 
-**See notice in ACKNOWLEDGEMENTS.md**
+_See notice in [ACKNOWLEDGEMENTS.md](ACKNOWLEDGEMENTS.md)_
