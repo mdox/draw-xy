@@ -1,8 +1,8 @@
 # Draw-XY
 
 Lightweight image generator.  
-To make own images user must change the source code.  
-The code is using 2d grid, scaled down to one unit world.
+For customization the source code has to be changed.  
+2d grid, image matrix is scaled down to 1 unit. `X = -1..1, Y = 1..-1`
 
 # Makefile
 
@@ -75,6 +75,15 @@ void plot(unsigned char pixel[], double x, double y)
     pixel[0] = pixel[3] = 255 * sin(x * y) / cos(y / x) / atan((double)config_index / config_rate);
 }
 ```
+
+# Output Example
+
+```sh
+# XCP Red
+make IN_CHANNELS=3 IN_WIDTH=16000 IN_HEIGHT=9000 OUT_WIDTH=1600 OUT_HEIGHT=900 image && sxiv image.png
+```
+
+![XCP](xcp.png)
 
 # License
 
