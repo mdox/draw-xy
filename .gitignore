@@ -1,6 +1,6 @@
 .vscode
 frames
 video.mp4
-image.jpg
+image.png
 *.o
 draw-xy.exe
