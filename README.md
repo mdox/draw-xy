@@ -1,8 +1,7 @@
 # Draw-XY
 
 Lightweight image generator.  
-For customization the source code has to be changed.  
-2d grid, image matrix is scaled down to 1 unit. `X = -1..1, Y = 1..-1`
+For customization the source code has to be changed.
 
 # Makefile
 
