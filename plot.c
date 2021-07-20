@@ -6,7 +6,7 @@ void plot(unsigned char pixel[], double x, double y)
 {
 // XCP: "X Circles Paradox" - malformed naming a bit
 #if 1
-    double n, r, f;
+    double n, r, f, xm;
     int i;
     int c;
     double p = (double)config_index / config_rate;
@@ -21,7 +21,8 @@ void plot(unsigned char pixel[], double x, double y)
     for (i = 0; i < 31; ++i, ++n)
     {
         r = pow(2.0, n);
-        if (pow(fmod(fabs(x), 2.0 * r) - r, 2.0) + pow(y, 2.0) <= pow(r, 2.0))
+        xm = fmod(fabs(x), 2.0 * r) - r;
+        if (xm * xm + y * y <= r * r)
         {
             break;
         }
