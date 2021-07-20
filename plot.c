@@ -1,6 +1,7 @@
 #include "plot.h"
 #include "config-extern.h"
 #include "math.h"
+#include "pow2n.h"
 
 void plot(unsigned char pixel[], double x, double y)
 {
@@ -20,7 +21,7 @@ void plot(unsigned char pixel[], double x, double y)
     n = floor(log(fabs(y)) / M_LN2);
     for (i = 0; i < 62; ++i, ++n)
     {
-        r = pow(2.0, n);
+        r = pow2n[61 + (int)(n)];
         xm = fmod(fabs(x), 2.0 * r) - r;
         if (xm * xm + y * y <= r * r)
         {
