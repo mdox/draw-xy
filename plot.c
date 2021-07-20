@@ -18,7 +18,7 @@ void plot(unsigned char pixel[], double x, double y)
 
     // This block is core of XCP
     n = floor(log(fabs(y)) / M_LN2);
-    for (i = 0; i < 31; ++i, ++n)
+    for (i = 0; i < 62; ++i, ++n)
     {
         r = pow(2.0, n);
         xm = fmod(fabs(x), 2.0 * r) - r;
