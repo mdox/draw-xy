@@ -1,3 +1,4 @@
+#include <omp.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -91,24 +92,18 @@ void draw(void)
     double dw = config_width - 1, dh = config_height - 1;
     double x0 = config_width > config_height ? -dw / dh : -1.0, py = config_height > config_width ? dh / dw : 1.0;
     double xs = -2.0 * x0 / dw, ys = 2.0 * py / dh;
-    double px;
 
     for (y = 0; y < config_height; ++y)
     {
-        px = x0;
-
         memset(buffer, 0, config_buffer_size);
 
+#pragma omp parallel for private(x)
         for (x = 0; x < config_width; ++x)
         {
-            plot(buffer + x * config_channels, px, py);
-
-            px += xs;
+            plot(buffer + x * config_channels, x0 + xs * x, py - ys * y);
         }
 
         fwrite(buffer, 1, config_buffer_size, stdout);
-
-        py -= ys;
     }
 }
 

@@ -20,7 +20,7 @@ REPEAT_VIDEO=0
 # Core Variables
 CC=gcc
 CFLAGS=-Wall
-LIBS=-lm
+LIBS=-lm -fopenmp
 SRC=*.c
 OBJS=*.o
 INCLUDES=*.h
